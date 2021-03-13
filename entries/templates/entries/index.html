@@ -1,0 +1,53 @@
+{% extends "entries/base.html" %}
+
+
+ {%block content %}
+      
+     
+<!-- Blog Entries Column -->
+      <div class="col-md-8">
+        
+        {% for entry in timesheet_entries %}
+        <!-- Blog Post -->
+        <div class="card mb-4 mt-4">
+          <div class="card-body">
+            <h5 class="card-title">{{ entry.entry_location }} - {{ entry.entry_wtgnumber }}</h5>
+    
+        
+            <a href="{% url 'entry-detail' entry.pk %}" class="btn btn-primary btn-sm">Check Details &rarr;</a>
+          </div>
+          <div class="card-footer text-muted">
+            Uploaded on {{ entry.entry_date }} by
+            <span class= "text-info mr-2">{{ entry.entry_author }}</span>
+          </div>
+        </div>
+        {% endfor %}
+        
+        {%if is_paginated %}
+        <!-- Pagination -->
+        <ul class="pagination justify-content-center mb-4">
+          {% if page_obj.has_previous %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}">&larr; Previous Page</a>
+          </li>
+          
+          {% endif %}
+          
+           {% if page_obj.has_next %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next Page &rarr;</a>
+          </li>
+             {% endif %}
+        </ul>
+           {% endif %}
+
+      </div>
+      
+       {%endblock%}
+       
+       
+       
+       
+       
+       
+       

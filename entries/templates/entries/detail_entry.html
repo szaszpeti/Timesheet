@@ -1,0 +1,110 @@
+{% extends "entries/base.html" %}
+
+
+ {%block content %}
+      
+     
+<!-- Blog Entries Column -->
+      <div class="col-md-8">
+        
+        <a href="{% url 'blog-home' %}">Back to the homepage</a>
+        <!-- Blog Post 
+        <div class="card mb-4 mt-4">
+          <div class="card-body">
+            <h3 class="card-title">{{ object.entry_activity_1 }}</h3>
+            <p class="card-text">{{ object.entry_time_start_1  }}</p>
+            <p class="card-text">{{ object.entry_time_end_1  }}</p>
+         
+          </div>
+          <div class="card-footer text-muted">
+            Posted on {{ object.entry_date }} by
+            <span class= "text-info mr-2">{{ object.entry_author }}</span>
+          </div>
+        </div> -->
+        
+        <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Location</th>
+      <th scope="col">WTG Number</th>
+      <th scope="col">Technichian</th>
+      <th scope="col">Technichian</th>
+      <th scope="col">Technichian</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{ object.entry_date }}</th>
+      <td>{{ object.entry_location }}</td>
+      <td>{{ object.entry_wtgnumber }}</td>
+      <td>{{ object.entry_technician_one }}</td>
+      <td>{{ object.entry_technician_two }}</td>
+      <td>{{ object.entry_technician_three }}</td>
+    </tr>
+    
+  </tbody>
+</table>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Activity</th>
+      <th scope="col">Start</th>
+      <th scope="col">End</th>
+      <th scope="col">Notes</th>
+    
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row">{{ object.entry_activity_1 }}</th>
+      <td>{{ object.entry_time_start_1 }}</td>
+      <td>{{ object.entry_time_end_1 }}</td>
+      <td>{{ object.entry_notes }}</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">{{ object.entry_activity_2 }}</th>
+      <td>{{ object.entry_time_start_2 }}</td>
+      <td>{{ object.entry_time_end_2 }}</td>
+      <td>{{ object.entry_notes }}</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">{{ object.entry_activity_3 }}</th>
+      <td>{{ object.entry_time_start_3 }}</td>
+      <td>{{ object.entry_time_end_3 }}</td>
+      <td>{{ object.entry_notes }}</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">{{ object.entry_activity_4 }}</th>
+      <td>{{ object.entry_time_start_4 }}</td>
+      <td>{{ object.entry_time_end_4 }}</td>
+      <td>{{ object.entry_notes }}</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">{{ object.entry_activity_5 }}</th>
+      <td>{{ object.entry_time_start_5 }}</td>
+      <td>{{ object.entry_time_end_5 }}</td>
+      <td>{{ object.entry_notes }}</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">{{ object.entry_activity_6 }}</th>
+      <td>{{ object.entry_time_start_6 }}</td>
+      <td>{{ object.entry_time_end_6 }}</td>
+      <td>{{ object.entry_notes }}</td>
+      
+    </tr>
+    
+  </tbody>
+</table>
+       
+       
+      
+      {% endblock %}
+       

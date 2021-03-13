@@ -1,0 +1,98 @@
+{% extends "entries/base.html" %}
+{% load crispy_forms_tags %}
+
+ {%block content %}
+      
+     
+
+      <div class="col-md-8">
+        <div class="card mb-4 mt-4">
+          <div class="card-header">
+           Add new Inspection
+         
+          </div>
+          <div class="card-body">
+          <form method ="POST">
+          {% csrf_token %}
+          
+          <div class="row">
+              <div class="col-6">
+          {{form.entry_location|as_crispy_field}}
+              </div>
+              <div class="col-4">
+          {{form.entry_wtgnumber|as_crispy_field}}
+               </div>
+            </div>
+            
+             <div class="row">
+              <div class="col-4">
+          {{form.entry_technician_one|as_crispy_field}}
+              </div>
+              <div class="col-4">
+         {{form.entry_technician_two|as_crispy_field}}
+               </div>
+               <div class="col-4">
+         {{form.entry_technician_three|as_crispy_field}}
+               </div>
+            </div>
+          </br>   </br>   </br>
+          <div class="row">
+              <div class="col-4">
+          {{form.entry_activity_1|as_crispy_field}}
+              </div>
+              <div class="col-4">
+          {{form.entry_time_start_1|as_crispy_field}}
+               </div>
+               <div class="col-4">
+          {{form.entry_time_end_1|as_crispy_field}}
+               </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-4">
+          {{form.entry_activity_2|as_crispy_field}}
+              </div>
+              <div class="col-4">
+          {{form.entry_time_start_2|as_crispy_field}}
+               </div>
+               <div class="col-4">
+          {{form.entry_time_end_2|as_crispy_field}}
+               </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-4">
+          {{form.entry_activity_3|as_crispy_field}}
+              </div>
+              <div class="col-4">
+          {{form.entry_time_start_3|as_crispy_field}}
+               </div>
+               <div class="col-4">
+          {{form.entry_time_end_3|as_crispy_field}}
+               </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-4">
+          {{form.entry_activity_4|as_crispy_field}}
+              </div>
+              <div class="col-4">
+          {{form.entry_time_start_4|as_crispy_field}}
+               </div>
+               <div class="col-4">
+          {{form.entry_time_end_4|as_crispy_field}}
+               </div>
+            </div>
+          <button type="submit" class ="btn btn-primary">Post Entry</button>
+              
+          
+          </form>
+          
+          </div>
+            </div>
+        </div>
+       
+       
+      
+      {% endblock %}
+       
