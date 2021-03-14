@@ -5,7 +5,7 @@
       
      
 
-      <div class="col-md-8">
+      <div class="col-md-12">
         <div class="card mb-4 mt-4">
           <div class="card-header">
            Add new Inspection
@@ -16,8 +16,11 @@
           {% csrf_token %}
           
           <div class="row">
-              <div class="col-6">
+              <div class="col-4">
           {{form.entry_location|as_crispy_field}}
+              </div>
+               <div class="col-4">
+          {{form.entry_wtglocalnumber|as_crispy_field}}
               </div>
               <div class="col-4">
           {{form.entry_wtgnumber|as_crispy_field}}
@@ -40,11 +43,14 @@
               <div class="col-4">
           {{form.entry_activity_1|as_crispy_field}}
               </div>
-              <div class="col-4">
+              <div class="col-2">
           {{form.entry_time_start_1|as_crispy_field}}
                </div>
-               <div class="col-4">
+               <div class="col-2">
           {{form.entry_time_end_1|as_crispy_field}}
+               </div>
+               <div class="col-4">
+          {{form.entry_note_1|as_crispy_field}}
                </div>
             </div>
             
@@ -52,11 +58,14 @@
               <div class="col-4">
           {{form.entry_activity_2|as_crispy_field}}
               </div>
-              <div class="col-4">
+              <div class="col-2">
           {{form.entry_time_start_2|as_crispy_field}}
                </div>
-               <div class="col-4">
+               <div class="col-2">
           {{form.entry_time_end_2|as_crispy_field}}
+               </div>
+               <div class="col-4">
+          {{form.entry_note_2|as_crispy_field}}
                </div>
             </div>
             
@@ -64,11 +73,14 @@
               <div class="col-4">
           {{form.entry_activity_3|as_crispy_field}}
               </div>
-              <div class="col-4">
+              <div class="col-2">
           {{form.entry_time_start_3|as_crispy_field}}
                </div>
-               <div class="col-4">
+               <div class="col-2">
           {{form.entry_time_end_3|as_crispy_field}}
+               </div>
+               <div class="col-4">
+          {{form.entry_note_3|as_crispy_field}}
                </div>
             </div>
             
@@ -76,11 +88,44 @@
               <div class="col-4">
           {{form.entry_activity_4|as_crispy_field}}
               </div>
-              <div class="col-4">
+              <div class="col-2">
           {{form.entry_time_start_4|as_crispy_field}}
                </div>
-               <div class="col-4">
+               <div class="col-2">
           {{form.entry_time_end_4|as_crispy_field}}
+               </div>
+               <div class="col-4">
+          {{form.entry_note_4|as_crispy_field}}
+               </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-4">
+          {{form.entry_activity_5|as_crispy_field}}
+              </div>
+              <div class="col-2">
+          {{form.entry_time_start_5|as_crispy_field}}
+               </div>
+               <div class="col-2">
+          {{form.entry_time_end_5|as_crispy_field}}
+               </div>
+               <div class="col-4">
+          {{form.entry_note_5|as_crispy_field}}
+               </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-4">
+          {{form.entry_activity_6|as_crispy_field}}
+              </div>
+              <div class="col-2">
+          {{form.entry_time_start_6|as_crispy_field}}
+               </div>
+               <div class="col-2">
+          {{form.entry_time_end_6|as_crispy_field}}
+               </div>
+               <div class="col-4">
+          {{form.entry_note_6|as_crispy_field}}
                </div>
             </div>
           <button type="submit" class ="btn btn-primary">Post Entry</button>

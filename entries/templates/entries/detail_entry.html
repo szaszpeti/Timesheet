@@ -5,7 +5,7 @@
       
      
 <!-- Blog Entries Column -->
-      <div class="col-md-8">
+      <div class="col-md-12">
         
         <a href="{% url 'blog-home' %}">Back to the homepage</a>
         <!-- Blog Post 
@@ -22,8 +22,8 @@
           </div>
         </div> -->
         
-        <table class="table">
-  <thead class="thead-dark">
+        <table class="table table-striped">
+  <thead class="table-info">
     <tr>
       <th scope="col">Date</th>
       <th scope="col">Location</th>
@@ -36,7 +36,7 @@
   <tbody>
     <tr>
       <th scope="row">{{ object.entry_date }}</th>
-      <td>{{ object.entry_location }}</td>
+      <td>{{ object.entry_location }} {{ object.entry_wtglocalnumber }}  </td>
       <td>{{ object.entry_wtgnumber }}</td>
       <td>{{ object.entry_technician_one }}</td>
       <td>{{ object.entry_technician_two }}</td>
@@ -46,8 +46,8 @@
   </tbody>
 </table>
 
-<table class="table">
-  <thead class="thead-dark">
+<table class="table table-striped">
+  <thead class="table-info">
     <tr>
       <th scope="col">Activity</th>
       <th scope="col">Start</th>
@@ -62,42 +62,42 @@
       <th scope="row">{{ object.entry_activity_1 }}</th>
       <td>{{ object.entry_time_start_1 }}</td>
       <td>{{ object.entry_time_end_1 }}</td>
-      <td>{{ object.entry_notes }}</td>
+      <td>{{ object.entry_note_1 }}</td>
       
     </tr>
     <tr>
       <th scope="row">{{ object.entry_activity_2 }}</th>
       <td>{{ object.entry_time_start_2 }}</td>
       <td>{{ object.entry_time_end_2 }}</td>
-      <td>{{ object.entry_notes }}</td>
+      <td>{{ object.entry_note_2 }}</td>
       
     </tr>
     <tr>
       <th scope="row">{{ object.entry_activity_3 }}</th>
       <td>{{ object.entry_time_start_3 }}</td>
       <td>{{ object.entry_time_end_3 }}</td>
-      <td>{{ object.entry_notes }}</td>
+      <td>{{ object.entry_note_3 }}</td>
       
     </tr>
     <tr>
       <th scope="row">{{ object.entry_activity_4 }}</th>
       <td>{{ object.entry_time_start_4 }}</td>
       <td>{{ object.entry_time_end_4 }}</td>
-      <td>{{ object.entry_notes }}</td>
+      <td>{{ object.entry_note_4 }}</td>
       
     </tr>
     <tr>
       <th scope="row">{{ object.entry_activity_5 }}</th>
       <td>{{ object.entry_time_start_5 }}</td>
       <td>{{ object.entry_time_end_5 }}</td>
-      <td>{{ object.entry_notes }}</td>
+      <td>{{ object.entry_note_5}}</td>
       
     </tr>
     <tr>
       <th scope="row">{{ object.entry_activity_6 }}</th>
       <td>{{ object.entry_time_start_6 }}</td>
       <td>{{ object.entry_time_end_6 }}</td>
-      <td>{{ object.entry_notes }}</td>
+      <td>{{ object.entry_note_6 }}</td>
       
     </tr>
     

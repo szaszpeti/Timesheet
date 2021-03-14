@@ -1,8 +1,12 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import Entry
+
+
+class StartView(LoginRequiredMixin, TemplateView):
+    template_name = 'entries/welcome.html'
 
 class HomeView(LoginRequiredMixin, ListView):
     model = Entry

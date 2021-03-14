@@ -1,0 +1,26 @@
+{% extends "entries/base.html" %}
+
+
+ {%block content %}
+      
+     
+<!-- Blog Entries Column -->
+      <div class="col-md-8">
+    
+        <div class="card mb-4 mt-4">
+          <div class="card-body">
+    
+        
+            <a href="{% url 'blog-home' %}" class="btn btn-primary btn-sm">INSPECTIONS</a>
+            </br>
+            </br>
+            <a href="{% url 'entry-create' %}" class="btn btn-primary btn-sm">ADD NEW INSPECTION</a>
+          
+          </div>
+         </div>
+      </div>
+       {%endblock%}
+       
+       
+       
+       

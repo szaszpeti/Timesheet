@@ -11,15 +11,16 @@
         <!-- Blog Post -->
         <div class="card mb-4 mt-4">
           <div class="card-body">
-            <h5 class="card-title">{{ entry.entry_location }} - {{ entry.entry_wtgnumber }}</h5>
+            <h5 class="card-title"><a href="{% url 'entry-detail' entry.pk %}">{{ entry.entry_location }} {{ entry.entry_wtglocalnumber }} - {{ entry.entry_wtgnumber }} 
+             </a></h5>
     
         
-            <a href="{% url 'entry-detail' entry.pk %}" class="btn btn-primary btn-sm">Check Details &rarr;</a>
+           
           </div>
-          <div class="card-footer text-muted">
+           <div class="card-footer text-muted">
             Uploaded on {{ entry.entry_date }} by
             <span class= "text-info mr-2">{{ entry.entry_author }}</span>
-          </div>
+          </div> 
         </div>
         {% endfor %}
         
